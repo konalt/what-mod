@@ -3,7 +3,7 @@ Bopoopin:dad:1
 Fish:dad:1
 sex:dad:1
 Shitty:spooky:2
-Nort:spooky:2
+North:spooky:2
 Lemon Man:monster:2
 Picky:pico:3
 Bunny Song:pico:3
