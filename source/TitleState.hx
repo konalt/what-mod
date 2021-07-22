@@ -331,6 +331,7 @@ class TitleState extends MusicBeatState
 						// FlxG.switchState(new OutdatedSubState());
 						// fuck you, i don't need to update
 						// i don't feel like it
+						FlxG.switchState(new MainMenuState());
 					}
 					else
 					{
