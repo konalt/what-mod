@@ -56,18 +56,19 @@ class Song
 		}
 		
 		trace('loading ' + Paths.json(folderLowercase + '/' + jsonInput.toLowerCase()));
-		var fardSongs = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		var fardSongs = CoolUtil.coolTextFile(Paths.txt('fardSongs'));
 		var fardSongsArray:Array<String> = [];
 
 		for (i in 0...fardSongs.length)
 		{
-			var data:String = fardSongs[i];
-			fardSongsArray.push(data);
+			fardSongsArray.push(fardSongs[i]);
+			trace(fardSongs[i] + " is an epic fard song");
 		}
 
 		if (fardSongsArray.contains(folderLowercase)) {
 			trace(folderLowercase + " is a fard song, loading fard instead");
 			folderLowercase = "fard";
+			jsonInput = "fard";
 		}
 
 		var rawJson = Assets.getText(Paths.json(folderLowercase + '/' + jsonInput.toLowerCase())).trim();
