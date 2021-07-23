@@ -257,7 +257,7 @@ class FlashingLightsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Flashing Lights " + (!FlxG.save.data.flashing ? "off" : "on");
+		return "Flashy Shite" + (!FlxG.save.data.flashing ? "NAY" : "YEA");
 	}
 }
 
@@ -277,7 +277,7 @@ class ShowInput extends Option
 
 	private override function updateDisplay():String
 	{
-		return (FlxG.save.data.inputShow ? "Extended Score Info" : "Minimalized Info");
+		return (FlxG.save.data.inputShow ? "MOAR DATA" : "pweeze no data onii-chan uwu");
 	}
 }
 
@@ -355,7 +355,7 @@ class FPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Counter " + (!FlxG.save.data.fps ? "off" : "on");
+		return "Da FPS Number: " + (!FlxG.save.data.fps ? "NAY" : "YEA");
 	}
 }
 
@@ -376,7 +376,7 @@ class ScoreScreen extends Option
 
 	private override function updateDisplay():String
 	{
-		return (FlxG.save.data.scoreScreen ? "Show Score Screen" : "No Score Screen");
+		return (FlxG.save.data.scoreScreen ? "Show da score screen" : "fuck da score screen");
 	}
 }
 
@@ -399,7 +399,7 @@ class FPSCapOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Cap";
+		return "ur fps maximumality";
 	}
 	
 	override function right():Bool {
@@ -428,8 +428,8 @@ class FPSCapOption extends Option
 
 	override function getValue():String
 	{
-		return "Current FPS Cap: " + FlxG.save.data.fpsCap + 
-		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? "Hz (Refresh Rate)" : "");
+		return "biggest fps maximumality: " + FlxG.save.data.fpsCap + 
+		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? "hz" : "");
 	}
 }
 
@@ -450,7 +450,7 @@ class ScrollSpeedOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Scroll Speed";
+		return "SPEED BICH";
 	}
 
 	override function right():Bool {
@@ -465,7 +465,7 @@ class ScrollSpeedOption extends Option
 	}
 
 	override function getValue():String {
-		return "Current Scroll Speed: " + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1);
+		return "SPEEDYNESS: " + HelperFunctions.truncateFloat(FlxG.save.data.scrollSpeed,1);
 	}
 
 	override function left():Bool {
@@ -500,7 +500,7 @@ class RainbowFPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Rainbow " + (!FlxG.save.data.fpsRain ? "off" : "on");
+		return "Pride FRAMERATE " + (!FlxG.save.data.fpsRain ? "NAY" : "YEA");
 	}
 }
 
@@ -521,7 +521,7 @@ class Optimization extends Option
 	
 		private override function updateDisplay():String
 		{
-			return "Optimization " + (FlxG.save.data.optimize ? "ON" : "OFF");
+			return "osu mania :flushed: " + (FlxG.save.data.optimize ? "ON" : "OFF");
 		}
 }
 
@@ -542,7 +542,7 @@ class NPSDisplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "NPS Display " + (!FlxG.save.data.npsDisplay ? "off" : "on");
+		return "note par seconds:xxcv " + (!FlxG.save.data.npsDisplay ? "NAY" : "YEA");
 	}
 }
 
@@ -563,7 +563,7 @@ class ReplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Load replays";
+		return "Load dem replays";
 	}
 }
 
@@ -670,13 +670,13 @@ class BotPlay extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.botplay = !FlxG.save.data.botplay;
-		trace('BotPlay : ' + FlxG.save.data.botplay);
+		trace('mysterious robot machine that plays da levels: ' + FlxG.save.data.botplay);
 		display = updateDisplay();
 		return true;
 	}
 	
 	private override function updateDisplay():String
-		return "BotPlay " + (FlxG.save.data.botplay ? "on" : "off");
+		return "mysterious robot machine that plays da levels: " + (FlxG.save.data.botplay ? "on" : "off");
 }
 
 class CamZoomOption extends Option
@@ -695,6 +695,6 @@ class CamZoomOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Camera Zoom " + (!FlxG.save.data.camzoom ? "off" : "on");
+		return "haha camera go nyooom: " + (!FlxG.save.data.camzoom ? "fuk dat shit" : "ye");
 	}
 }
