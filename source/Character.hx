@@ -150,10 +150,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Idle', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
 			case 'spooky':
@@ -581,6 +577,7 @@ class Character extends FlxSprite
 
 		switch (curCharacter)
 		{
+			// what is this shit kade??
 			case 'gf':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
