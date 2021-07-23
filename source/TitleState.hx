@@ -529,10 +529,6 @@ class TitleState extends MusicBeatState
 				alreadyShownWacky.push(curWacky.join("--"));
 			case 28:
 				deleteCoolText();
-				curWacky = FlxG.random.getObject(getIntroTextShit());
-				if (alreadyShownWacky.contains(curWacky.join("--"))) {
-					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
-				}
 				createCoolText(["Friday"]);
 			case 29:
 				addMoreText('Night');
