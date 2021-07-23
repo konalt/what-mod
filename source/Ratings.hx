@@ -6,34 +6,22 @@ class Ratings
     {
         var ranking:String = "N/A";
 		if(FlxG.save.data.botplay && !PlayState.loadRep)
-			ranking = "BotPlay";
+			ranking = "robot";
 
         if (PlayState.misses == 0 && PlayState.bads == 0 && PlayState.shits == 0 && PlayState.goods == 0) // Marvelous (SICK) Full Combo
-            ranking = "(Fucken Epic)";
+            ranking = "Epic";
         else if (PlayState.misses == 0 && PlayState.bads == 0 && PlayState.shits == 0 && PlayState.goods >= 1) // Good Full Combo (Nothing but Goods & Sicks)
-            ranking = "(Still pretty good)";
+            ranking = "Great";
         else if (PlayState.misses == 0) // Regular FC
-            ranking = "(Hm, Nice :D)";
+            ranking = "Good";
         else if (PlayState.misses < 10) // Single Digit Combo Breaks
-            ranking = "(Gettin a bit shit)";
+            ranking = "Eh, OK";
         else
-            ranking = "(Fuckin terrible. Just die already)";
+            ranking = "Stupid dumb cunt";
 
         // WIFE TIME :)))) (based on Wife3)
 
         var wifeConditions:Array<Bool> = [
-            accuracy >= 99.9935, // AAAAA
-            accuracy >= 99.980, // AAAA:
-            accuracy >= 99.970, // AAAA.
-            accuracy >= 99.955, // AAAA
-            accuracy >= 99.90, // AAA:
-            accuracy >= 99.80, // AAA.
-            accuracy >= 99.70, // AAA
-            accuracy >= 99, // AA:
-            accuracy >= 96.50, // AA.
-            accuracy >= 93, // AA
-            accuracy >= 90, // A:
-            accuracy >= 85, // A.
             accuracy >= 80, // A
             accuracy >= 70, // B
             accuracy >= 60, // C
@@ -48,44 +36,20 @@ class Ratings
                 switch(i)
                 {
                     case 0:
-                        ranking += " BLOODY MARVELOUS";
+                        ranking += " FOCKEN NICE";
                     case 1:
-                        ranking += " BLOODY AWESOME";
-                    case 2:
-                        ranking += " FUCKEN STUNNIN'";
-                    case 3:
-                        ranking += " AMAZIN'";
-                    case 4:
-                        ranking += " PRETTY EPIC";
-                    case 5:
-                        ranking += " NOW THAT'S WHAT I CALL EPIC";
-                    case 6:
-                        ranking += " FUK YE MAN";
-                    case 7:
-                        ranking += " CALMIN DOWN A BIT";
-                    case 8:
-                        ranking += " PRETTY FUCKEN GOOD";
-                    case 9:
                         ranking += " NICE";
-                    case 10:
-                        ranking += " GREAT";
-                    case 11:
-                        ranking += " EPIC";
-                    case 12:
-                        ranking += " OK";
-                    case 13:
-                        ranking += " A BIT SHIT NGL";
-                    case 14:
-                        ranking += " FUK OFF MAN";
-                    case 15:
-                        ranking += " FUCKEN TERRIBLE";
+                    case 2:
+                        ranking += " OK I GUESS";
+                    case 3:
+                        ranking += " SHITTY";
                 }
                 break;
             }
         }
 
         if (accuracy == 0)
-            ranking = "hit a note first u moron";
+            ranking = "gigabit";
 		else if(FlxG.save.data.botplay && !PlayState.loadRep)
 			ranking = "BotPlay";
 
@@ -141,7 +105,7 @@ class Ratings
     {
         return
          (FlxG.save.data.npsDisplay ?																							// NPS Toggle
-         "how many notes ur doin: " + nps + " (biggest one is " + maxNPS + ")" + (!PlayStateChangeables.botPlay || PlayState.loadRep ? " | " : "") : "") +								// 	NPS
+         "noties: " + nps + " (max " + maxNPS + ")" + (!PlayStateChangeables.botPlay || PlayState.loadRep ? " | " : "") : "") +								// 	NPS
          (!PlayStateChangeables.botPlay || PlayState.loadRep ? "how good u are:" + (Conductor.safeFrames != 10 ? score + " (" + scoreDef + ")" : "" + score) + 		// Score
          (FlxG.save.data.accuracyDisplay ?																						// Accuracy Toggle
          " | brainfards:" + PlayState.misses + 																				// 	Misses/Combo Breaks
