@@ -57,7 +57,7 @@ class Song
 		
 		trace('loading ' + Paths.json(folderLowercase + '/' + jsonInput.toLowerCase()));
 		var fardSongs = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		var fardSongsArray:Array<String>;
+		var fardSongsArray:Array<String> = [];
 
 		for (i in 0...fardSongs.length)
 		{
