@@ -139,6 +139,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+			case 'fardman':
+				// FARD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/fardman', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24);
+				animation.addByPrefix('singUP', 'Idle', 24);
+				animation.addByPrefix('singRIGHT', 'Idle', 24);
+				animation.addByPrefix('singDOWN', 'Idle', 24);
+				animation.addByPrefix('singLEFT', 'Idle', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
@@ -499,7 +516,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'tiky':
-				tex = Paths.getSparrowAtlas('characters/tiky');
+				tex = Paths.getSparrowAtlas('characters/tiky', 'shared');
 				frames = tex;
 				animation.addByPrefix('idle', 'Idle', 24);
 				animation.addByPrefix('singUP', 'Sing Up', 24);

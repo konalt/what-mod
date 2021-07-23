@@ -621,7 +621,7 @@
             "lengthInSteps": 16,
             "mustHitSection": true
         }, { "sectionNotes": [], "lengthInSteps": 16, "mustHitSection": true }, { "sectionNotes": [], "lengthInSteps": 16, "mustHitSection": true }, { "sectionNotes": [], "lengthInSteps": 16, "mustHitSection": true }, { "lengthInSteps": 16, "altAnim": false, "typeOfSection": 0, "sectionNotes": [], "bpm": 110, "changeBPM": false, "mustHitSection": true }],
-        "player2": "pico",
+        "player2": "fardman",
         "song": "Fard",
         "stage": "stage",
         "needsVoices": true,
