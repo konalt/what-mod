@@ -162,7 +162,7 @@ class TitleState extends MusicBeatState
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		Conductor.changeBPM(102);
+		Conductor.changeBPM(139);
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
@@ -265,6 +265,21 @@ class TitleState extends MusicBeatState
 
 		return swagGoodArray;
 	}
+	function getMoreIntroTextShit():Array<Array<String>>
+		{
+			// pls no copy pasterino my story
+			var fullText:String = Assets.getText(Paths.txt('introText2'));
+	
+			var firstArray:Array<String> = fullText.split('\n');
+			var swagGoodArray:Array<Array<String>> = [];
+	
+			for (i in firstArray)
+			{
+				swagGoodArray.push(i.split('--'));
+			}
+	
+			return swagGoodArray;
+		}
 
 	var transitioning:Bool = false;
 
@@ -387,6 +402,8 @@ class TitleState extends MusicBeatState
 		}
 	}
 
+	var alreadyShownWacky:Array<String> = [];
+
 	override function beatHit()
 	{
 		super.beatHit();
@@ -404,59 +421,125 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 1:
-				createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-			// credTextShit.visible = true;
+				createCoolText(['professor konalt']);
 			case 3:
-				addMoreText('present');
-			// credTextShit.text += '\npresent...';
-			// credTextShit.addText();
+				addMoreText('presents');
 			case 4:
 				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = 'In association \nwith';
-			// credTextShit.screenCenter();
 			case 5:
-				if (Main.watermarks)
-					createCoolText(['Kade Engine', 'by']);
-				else
-					createCoolText(['In Partnership', 'with']);
+				createCoolText(["Konalt Mod is"]);
 			case 7:
-				if (Main.watermarks)
-					addMoreText('KadeDeveloper');
-				else
-				{
-					addMoreText('Newgrounds');
-					ngSpr.visible = true;
-				}
-			// credTextShit.text += '\nNewgrounds';
+				addMoreText('Epic');
 			case 8:
 				deleteCoolText();
 				ngSpr.visible = false;
-			// credTextShit.visible = false;
-
-			// credTextShit.text = 'Shoutouts Tom Fulp';
-			// credTextShit.screenCenter();
-			case 9:
 				createCoolText([curWacky[0]]);
-			// credTextShit.visible = true;
+			case 9:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 10:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
 			case 11:
 				addMoreText(curWacky[1]);
-			// credTextShit.text += '\nlmao';
+				alreadyShownWacky.push(curWacky.join("--"));
 			case 12:
 				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = "Friday";
-			// credTextShit.screenCenter();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
 			case 13:
-				addMoreText('Friday');
-			// credTextShit.visible = true;
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
 			case 14:
-				addMoreText('Night');
-			// credTextShit.text += '\nNight';
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
 			case 16:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 17:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 18:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 19:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 20:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 21:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 22:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 23:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 24:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 25:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 26:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText([curWacky[0]]);
+			case 27:
+				addMoreText(curWacky[1]);
+				alreadyShownWacky.push(curWacky.join("--"));
+			case 28:
+				deleteCoolText();
+				curWacky = FlxG.random.getObject(getIntroTextShit());
+				if (alreadyShownWacky.contains(curWacky.join("--"))) {
+					curWacky = FlxG.random.getObject(getMoreIntroTextShit());trace("gettin another one yo");
+				}
+				createCoolText(["Friday"]);
+			case 29:
+				addMoreText('Night');
+			case 30:
+				addMoreText('Fuckin');
+			case 32:
+				deleteCoolText();
 				skipIntro();
 		}
 	}
