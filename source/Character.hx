@@ -146,7 +146,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('idle', 'Tankman Idle Dance instance', 24);
 				animation.addByPrefix('singDOWN', 'Tankman DOWN note instance', 24);
 				animation.addByPrefix('singUP', 'Tankman UP note instance', 24);
-				// NINJAMUFFIN Y U FLIP DIS??
+				// why is this completely fucked? why is left right? who did this?
+				// what ungodly tankman artist did this
 				animation.addByPrefix('singRIGHT', 'Tankman Note Left instance', 24);
 				animation.addByPrefix('singLEFT', 'Tankman Right Note instance', 24);
 
