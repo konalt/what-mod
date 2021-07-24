@@ -34,7 +34,7 @@ class OptionsMenu extends MusicBeatState
 			new FPSCapOption("Cap your FPS"),
 			#end
 			new ScrollSpeedOption("Change your scroll speed (1 = Chart dependent)"),
-			new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)"),
+			new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Millisecond Based)"),
 			new ResetButtonOption("Toggle pressing R to gameover."),
 			// new OffsetMenu("Get a note offset based off of your inputs!"),
 			new CustomizeGameplay("Drag'n'Drop Gameplay Modules around to your preference")
@@ -57,7 +57,6 @@ class OptionsMenu extends MusicBeatState
 			new ReplayOption("View replays"),
 			#end
 			new FlashingLightsOption("Toggle flashing lights that can cause epileptic seizures and strain."),
-			new WatermarkOption("Enable and disable all watermarks from the engine."),
 			new ScoreScreen("Show the score screen after the end of a song"),
 			new ShowInput("Display every single input in the score screen."),
 			new Optimization("No backgrounds, no characters, centered notes, no player 2."),

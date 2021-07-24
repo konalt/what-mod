@@ -139,6 +139,26 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+			case 'tankman':
+				// TANKMAN ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/tank', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Tankman Idle Dance instance', 24);
+				animation.addByPrefix('singDOWN', 'Tankman DOWN note instance', 24);
+				animation.addByPrefix('singUP', 'Tankman UP note instance', 24);
+				// NINJAMUFFIN Y U FLIP DIS??
+				animation.addByPrefix('singRIGHT', 'Tankman Note Left instance', 24);
+				animation.addByPrefix('singLEFT', 'Tankman Right Note instance', 24);
+
+				addOffset('idle', 0, -83);
+				addOffset("singUP", 24, -34);
+				addOffset("singRIGHT", -1, -96);
+				addOffset("singLEFT", 84, -113);
+				addOffset("singDOWN", 98, -186);
+				flipX = true;
+				playAnim('idle');
+
+
 			case 'fardman':
 				// FARD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/fardman', 'shared');

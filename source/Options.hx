@@ -92,7 +92,7 @@ class DFJKOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Key Bindings";
+		return "da buttons";
 	}
 }
 
@@ -114,7 +114,7 @@ class CpuStrums extends Option
 
 	private override function updateDisplay():String
 	{
-		return  FlxG.save.data.cpuStrums ? "Light CPU Strums" : "CPU Strums stay static";
+		return  FlxG.save.data.cpuStrums ? "player 2's light go WEEEE" : "player 2's light is boring";
 	}
 
 }
@@ -136,7 +136,7 @@ class DownscrollOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.downscroll ? "Downscroll" : "Upscroll";
+		return FlxG.save.data.downscroll ? "da notes go down" : "da notes go up";
 	}
 }
 
@@ -157,7 +157,7 @@ class GhostTapOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.ghost ? "Ghost Tapping" : "No Ghost Tapping";
+		return FlxG.save.data.ghost ? "new fangled input" : "ancient input";
 	}
 }
 
@@ -177,7 +177,7 @@ class AccuracyOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Accuracy " + (!FlxG.save.data.accuracyDisplay ? "off" : "on");
+		return "show da accuracy " + (!FlxG.save.data.accuracyDisplay ? "ye" : "nah");
 	}
 }
 
@@ -197,7 +197,7 @@ class SongPositionOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Song Position " + (!FlxG.save.data.songPosition ? "off" : "on");
+		return "bar at da top " + (!FlxG.save.data.songPosition ? "ye" : "nah");
 	}
 }
 
@@ -217,7 +217,7 @@ class DistractionsAndEffectsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Distractions " + (!FlxG.save.data.distractions ? "off" : "on");
+		return "distrakshuns " + (!FlxG.save.data.distractions ? "ye" : "nah");
 	}
 }
 
@@ -277,7 +277,7 @@ class ShowInput extends Option
 
 	private override function updateDisplay():String
 	{
-		return (FlxG.save.data.inputShow ? "MOAR DATA" : "pweeze no data onii-chan uwu");
+		return (FlxG.save.data.inputShow ? "MOAR DATA" : "smol data");
 	}
 }
 
@@ -355,7 +355,7 @@ class FPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Da FPS Number: " + (!FlxG.save.data.fps ? "NAY" : "YEA");
+		return "Da FPS Counter: " + (!FlxG.save.data.fps ? "NAY" : "YEA");
 	}
 }
 
@@ -428,7 +428,7 @@ class FPSCapOption extends Option
 
 	override function getValue():String
 	{
-		return "biggest fps maximumality: " + FlxG.save.data.fpsCap + 
+		return "fps maximumality: " + FlxG.save.data.fpsCap + 
 		(FlxG.save.data.fpsCap == Application.current.window.displayMode.refreshRate ? "hz" : "");
 	}
 }
@@ -500,7 +500,7 @@ class RainbowFPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Pride FRAMERATE " + (!FlxG.save.data.fpsRain ? "NAY" : "YEA");
+		return "rgb framerate " + (!FlxG.save.data.fpsRain ? "NAY" : "YEA");
 	}
 }
 
@@ -521,7 +521,7 @@ class Optimization extends Option
 	
 		private override function updateDisplay():String
 		{
-			return "osu mania :flushed: " + (FlxG.save.data.optimize ? "ON" : "OFF");
+			return (FlxG.save.data.optimize ? "game looks shit" : "game looks good");
 		}
 }
 
@@ -542,7 +542,7 @@ class NPSDisplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "note par seconds:xxcv " + (!FlxG.save.data.npsDisplay ? "NAY" : "YEA");
+		return (!FlxG.save.data.npsDisplay ? "fuk dat nps display" : "gimme dat nps display");
 	}
 }
 
@@ -563,7 +563,7 @@ class ReplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Load dem replays";
+		return "Lemme look at my replays";
 	}
 }
 
@@ -670,13 +670,15 @@ class BotPlay extends Option
 	public override function press():Bool
 	{
 		FlxG.save.data.botplay = !FlxG.save.data.botplay;
-		trace('mysterious robot machine that plays da levels: ' + FlxG.save.data.botplay);
+		trace('fnfbot: ' + FlxG.save.data.botplay);
 		display = updateDisplay();
 		return true;
 	}
 	
 	private override function updateDisplay():String
-		return "mysterious robot machine that plays da levels: " + (FlxG.save.data.botplay ? "on" : "off");
+		{
+		return "fnfbot: " + (FlxG.save.data.botplay ? "on" : "off");
+		}
 }
 
 class CamZoomOption extends Option
@@ -695,6 +697,6 @@ class CamZoomOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "haha camera go nyooom: " + (!FlxG.save.data.camzoom ? "fuk dat shit" : "ye");
+		return "zooom: " + (!FlxG.save.data.camzoom ? "fuk dat shit" : "ye");
 	}
 }
